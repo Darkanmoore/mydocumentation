@@ -1,0 +1,4 @@
+mydocumentation
+===============
+
+My personal configuration
