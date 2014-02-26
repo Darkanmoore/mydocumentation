@@ -1,8 +1,13 @@
 zstyle :compinstall filename '/home/simone/.zshrc'
 autoload -Uz compinit zcalc
 compinit
-echo '-----------> The God of Freedom say <--------------'
-cowsay -f tux $(fortune)
+echo '-------------->  Freedom is the future  <------------------'
+echo '|                                                         |'
+echo '|  Simplicity of implementation, code-elegance,           |'
+echo '|          and minimalism shall always remain the         |'
+echo '|               reigning priorities of Arch development.  |'
+echo '|                                                         |'
+echo '-----------------------------------------------------------'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' file-sort modification reverse
 zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
@@ -20,7 +25,6 @@ PROMPT="%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg_no_bold[cyan]%}
 setopt correctall
 alias ls='pwd; ls --classify --tabsize=0 --literal --color=auto --human-readable'
 zstyle '*:processes-names' command 'ps -e -o comm='
-alias shutdown='sudo shutdown -h now'
 alias cp='cp -v --interactive'
 alias mv='mv -v --interactive'
 alias rm='rm -v --interactive'
@@ -37,6 +41,7 @@ alias free='free -h'
 alias update='sudo pacman -Syy && sudo pacman -Su'
 alias p3='python3'
 alias p2='python2'
+alias xx='xinit xfce'
 
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
@@ -45,5 +50,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 alias grep='grep --color=auto'
 alias pacman='sudo pacman'
-alias x='startx' # I hate login manager ŁØŁ
+alias x='startx' # I hate login manager ÅÃ˜Å
+alias open='exec openbox-session'
 RPROMPT="[%{$fg[green]%}%*%{$reset_color%}][%{$fg_no_bold[yellow]%}%?%{$reset_color%}]" 
+
