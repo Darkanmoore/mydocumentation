@@ -1,4 +1,4 @@
-zstyle :compinstall filename '/home/simone/.zshrc'
+zstyle :compinstall filename '/home/napster/.zshrc'
 autoload -Uz compinit zcalc
 compinit
 echo '-------------->  Freedom is the future  <------------------'
