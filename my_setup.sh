@@ -1,17 +1,5 @@
 #!/bin/bash
 
-#x=`pacman -Qe thunar`
-#x1=`echo $?`
-#ch=
-
-#if [ $x1 = "1" ]; then
-#   echo 'The programm is not install. Do you want to install it? [y/n]'
-#   read ch
-#   if [ $ch = "y" ]; then
-#      pacman -S thunar
-#   fi
-#fi
-
 ch=
 echo '** Copy the repository in your home? [y/n]'
 read ch
