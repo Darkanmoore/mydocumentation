@@ -3,7 +3,14 @@
 ch=
 echo '** Copy the repository in your home? [y/n]'
 read ch
-echo  ' '
+echo ' '
+
+if [! -f /usr/bin/git ];then
+  echo ' ## [ Git is not installed. ]'
+  echo ' '
+  sudo pacman -S git
+fi
+
 if [ $ch = "y" ];then
   if [ -d ~/dotfiles ];then
     echo '## [ The repository already exists. I remove it and reclone it ]'
@@ -11,10 +18,10 @@ if [ $ch = "y" ];then
     echo ' '
     yes | rm -r ~/dotfiles
     git clone http://github.com/Darkanmoore/mydocumentation
-    mv ~/mydocumentation ~/dotfiles
+    mv ~/mydocumentation ~/dotfile
   else
     echo "## [ Your repo doesn't exists, so I will create it ]"
-    echo ' ' 
+    echo ' '
     echo ' '
     git clone http://github.com/Darkanmoore/mydocumentation
     echo '## [ Your config are in ~/dotfiles ]'
@@ -39,17 +46,9 @@ echo  ' '
 if [ $ch = "y" ];then
   echo '## [ Coping all config in your home ]'
   echo ' '
-  cd ~/dotfiles
-  cp -r .vim ~/.
-  cp .vimrc ~/.
-  cp .Xdefaults ~/.
-  cp .zshrc ~/.
-  cp -r .zsh ~/.
-  cp -r .config/awesome ~/.config
-  cp -r .mpd ~/.
-  cp -r .ncmpcpp ~/.
-  cp .xinitrc ~/.
-  cp .lockit.sh ~/.
+  cp -r ~/dotfiles/.config/awesome ~/.config
+  cp -r ~/dotfiles/.* ~/.
+  cp ~/dotfiles/.* ~/.
   echo '## [ Coping is finished ]'
 fi
 echo ' '
