@@ -1,0 +1,96 @@
+URxvt.scrollBar: of
+URxvt.font: xft:Source Code Pro:Bold:size=10
+
+
+URxvt*termName:screen-256color
+URxvt.jumpScroll: false
+URxvt.saveLines: 32
+URxvt.letterSpace: 0
+URxvt.internalBorder: 0
+URxvt*loginShell: true
+URxvt.iconFile: /usr/share/icons/FlatWoken/scalable/apps/terminal.svg
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: false
+Xft.hinstyle: hintfull
+Xft.lcdfilter: lcdlight
+URxvt*xftAntialias: false
+
+URxvt.keysym.C-3: command:\033]710;xft: Source Code 
+Pro:size=6\007
+URxvt.keysym.C-4: command:\033]710;xft: Source Code 
+Pro:size=7\007
+URxvt.keysym.C-5: command:\033]710;xft: Source Code 
+Pro:size=8\007
+URxvt.keysym.C-6: command:\033]710;xft: Source Code 
+Pro:size=9\007
+URxvt.keysym.C-7: command:\033]710;xft: Source Code 
+Pro:size=11\007
+URxvt.keysym.C-8: command:\033]710;xft: Source Code 
+Pro:size=13\007
+URxvt.keysym.C-9: command:\033]710;xft: Source Code 
+Pro:size=17\007
+
+urxvt.perl-ext-common: default,matcher,clipboard,url-select,keyboard-select
+!URxvt.background: [75]#000000
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+URxvt.colorUL: #4682B4!
+urxvt.depth: 32
+!
+URxvt.transparent: false
+URxvt.shading: 40
+!
+URxvt.scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+urxvt*secondaryScroll: true
+urxvt*saveLines: 500
+urxvt*urgentOnBell:                     false
+!
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
+URxvt.keysym.Shift-Control-C : perl:clipboard:copy
+URxvt.keysym.Shift-Control-V : perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+!MISC
+
+*background: #002b36
+*foreground: #839496
+!
+! black dark/light
+*color0: #073642
+*color8: #002b36
+  
+!  !! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+!   
+!   !! green dark/light
+*color2: #859900
+*color10: #93a1a1
+!    
+!    !! yellow dark/light
+*color3: #b58900
+*color11: #839496
+!     
+!     !! blue dark/light
+*color4: #4682d0
+*color12: #4682d0
+!      
+!      !! magenta dark/light
+*Color5: #d33682
+*color13: #6c71c4
+!       
+!       !! cyan dark/light
+*color6: #00FFFF
+*color14: #00FFFF
+!        
+!        !! white dark/light
+*color7: #073642
+*color15: #fdf6e3

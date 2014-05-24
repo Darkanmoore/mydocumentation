@@ -1,56 +1,46 @@
-zstyle :compinstall filename '/home/napster/.zshrc'
+
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="xiong-chiamiov-plus"
+HIST_STAMPS="mm/dd/yyyy"
+plugins=(git archlinux github vi-mode themes battery cp tmux)
+
+source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh/alias.zsh
+source $HOME/.zsh/setopt.zsh
+
+export GDK_USE_XFT=1
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export TERM=rxvt
 autoload -Uz compinit zcalc
 compinit
-echo '-------------->  Freedom is the future  <------------------'
-echo '|                                                         |'
-echo '|  Simplicity of implementation, code-elegance,           |'
-echo '|          and minimalism shall always remain the         |'
-echo '|               reigning priorities of Arch development.  |'
-echo '|                                                         |'
-echo '-----------------------------------------------------------'
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==02=01}:${(s.:.)LS_COLORS}")'
 zstyle ':completion:*' menu select
-zstyle ':completion:*' file-sort modification reverse
-zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
-
-# You need zsh-syntax-highlighting installed
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-autoload -U colors && colors
-echo ''
-setopt VI
-setopt NO_BEEP
-alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --" # Copy with progress bar && rsync <3
-export EDITOR=vim
-
-PROMPT="%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg_no_bold[cyan]%}%1~ %{$reset_color%}%# "
-setopt correctall
-alias ls='pwd; ls --classify --tabsize=0 --literal --color=auto --human-readable'
 zstyle '*:processes-names' command 'ps -e -o comm='
-alias cp='cp -v --interactive'
-alias mv='mv -v --interactive'
-alias rm='rm -v --interactive'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias c='clear'
-alias less='less --quiet'
-alias s='cd ..'
-alias h='cd ~'
-alias df='df --human-readable'
-alias du='du -s --human-readable'
-alias free='free -h'
-alias update='sudo pacman -Syy && sudo pacman -Su'
-alias p3='python3'
-alias p2='python2'
-alias xx='xinit xfce'
-
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+zstyle ':completion:*' file-sort modification reverse
 
+
+autoload -U colors && colors
+zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=31=36"
+
+insert_sudo () { zle beginning-of-line; zle -U "sudo " }
+zle -N insert-sudo insert_sudo
+bindkey "^[d" insert-sudo
+
+export EDITOR=vim
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[3~" delete-char
+bindkey "^[[5~" up-line-or-history
+bindkey "^[[6~" down-line-or-history
+echo "$fg[white]//                                       // $reset_color"
+echo "$fg[white]//                                       // "
+echo "$fg[white]//        Better to reign in Hell,       // "
+echo "$fg[white]//         then serve in Heav'n          // "
+echo "$fg[white]//                                       // "
+echo "$fg[white]//                                       // "
+echo ""
 HISTFILE=~/.histfile
 HISTSIZE=1000
-SAVEHIST=1000
-alias grep='grep --color=auto'
-alias pacman='sudo pacman'
-alias x='startx' # I hate login manager ÅÃ˜Å
-alias open='exec openbox-session'
-RPROMPT="[%{$fg[green]%}%*%{$reset_color%}][%{$fg_no_bold[yellow]%}%?%{$reset_color%}]" 
-
+SAVEHIST=200

@@ -7,7 +7,7 @@ syntax enable
 syntax on
 set nocompatible
 set background=dark
-colorscheme jellybeans
+colorscheme molokai
 set t_Co=256
 set shell=/bin/zsh
 set termencoding=utf-8
