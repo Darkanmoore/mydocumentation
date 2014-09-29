@@ -1,11 +1,11 @@
 URxvt.scrollBar: of
-URxvt.font: xft:Source Code Pro:Bold:size=10
+URxvt.font: xft:Source Code Pro:Regular:size=9
 
 
 URxvt*termName:screen-256color
 URxvt.jumpScroll: false
 URxvt.saveLines: 32
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 URxvt.internalBorder: 0
 URxvt*loginShell: true
 URxvt.iconFile: /usr/share/icons/FlatWoken/scalable/apps/terminal.svg
@@ -39,7 +39,7 @@ URxvt.matcher.button: 1
 URxvt.colorUL: #4682B4!
 urxvt.depth: 32
 !
-URxvt.transparent: false
+URxvt.transparent: true
 URxvt.shading: 40
 !
 URxvt.scrollBar: false
@@ -64,33 +64,33 @@ URxvt.url-select.underline: true
 *foreground: #839496
 !
 ! black dark/light
-*color0: #073642
-*color8: #002b36
+!*color0: #073642
+!*color8: #002b36
   
 !  !! red dark/light
-*color1: #dc322f
-*color9: #cb4b16
+!*color1: #dc322f
+!*color9: #cb4b16
 !   
 !   !! green dark/light
-*color2: #859900
-*color10: #93a1a1
+!*color2: #859900
+!*color10: #93a1a1
 !    
 !    !! yellow dark/light
-*color3: #b58900
-*color11: #839496
+!*color3: #b58900
+!*color11: #839496
 !     
 !     !! blue dark/light
-*color4: #4682d0
-*color12: #4682d0
+!*color4: #4682d0
+!*color12: #4682d0
 !      
 !      !! magenta dark/light
-*Color5: #d33682
-*color13: #6c71c4
+!*Color5: #d33682
+!*color13: #6c71c4
 !       
 !       !! cyan dark/light
-*color6: #00FFFF
-*color14: #00FFFF
+!*color6: #00FFFF
+!*color14: #00FFFF
 !        
 !        !! white dark/light
-*color7: #073642
-*color15: #fdf6e3
+!*color7: #073642
+!*color15: #fdf6e3
