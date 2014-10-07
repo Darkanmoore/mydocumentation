@@ -36,8 +36,8 @@ read ch
 echo ' '
 if [ $ch = "y" ];then
   echo '## [ Install all programs: AWESOME, MPD, NCMPCPP, URXVT, NM-APPLET, FONTS, VIM, ZSH ]' 
-  sudo pacman -S awesome dmenu vim zsh rxvt-unicode rxvt-unicode-terminfo urxvt-perls mpd ncmpcpp i3lock network-manager-applet gnome-keyring
-  yaourt -S oh-my-zsh-git lain-git ttf-lato
+  sudo pacman -S awesome dmenu vim zsh rxvt-unicode rxvt-unicode-terminfo urxvt-perls mpd ncmpcpp i3lock network-manager-applet gnome-keyring adobe-source-code-pro-fonts
+  yaourt -S lain-git 
 fi
 
 echo '** Do you want to copy all of your config files in you home? [y/n]'
